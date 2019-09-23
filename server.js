@@ -6,8 +6,12 @@ const port = process.env.PORT || 3000
 
 app.get('/', (req, res) => res.send('Hello World!'))
 
-app.get('/', function (req, res) {
+/*app.get('/', function (req, res) {
     res.send('Hello World!');
-})
+})*/
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.post('/chat', function (req, res){
+  res.send('Nous sommes a Paris');
+});
+
+app.listen(port, () => console.log('Example app listening on port ${port}!'))
